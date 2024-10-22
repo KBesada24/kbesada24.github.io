@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="lab5.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Sign up for the NBA Meet and Greet!</h1>
+      <p class="text-center">Meet some of the Best Players in the NBA!</p>
+      <img
+        src="data:image/png;base64,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"
+        class="img-fluid mx-auto d-block"
+        alt="Centered Image"
+      />
+      <h2 class="text-center">User Registration</h2>
+      <p class="text-center">Please fill out the form below.</p>
+      <form id="registrationForm" class="p-4 border rounded bg-light">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="dob" class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" id="dob" required />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <div class="d-grid">
+          <button type="button" class="btn btn-primary" onclick="submitForm()">
+            Register
+          </button>
+        </div>
+      </form>
+
+      <div id="result" class="mt-4"></div>
+    </div>
+
+    <!-- Bootstrap JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script src="lab5.js"></script>
+  </body>
+</html>
