@@ -1,26 +1,33 @@
-let userName;
+window.alert("Welcome to my store!");
 
-let greeting = (window.onload = function () {
-  userName = prompt("Welcome! please enter your name:", "Kirollos");
-  alert("Welcome " + userName + "! ");
-});
+let userName = window.prompt("Please enter your name", "Kiro");
+let greeting;
 
-let item = (window.onload = function () {
-  let item = prompt("What would you like to order?", "Cupcake");
-  alert("Your order is " + item + "!");
-});
+let time = new Date();
 
-let numOfItems = (window.onload = function () {
-  let numOfItems = prompt("How many would you like?", "1");
-  alert("Your order is " + numOfItems + " " + item + "s!");
-});
+if (time.getHours() < 12) {
+  greeting = window.alert(`Good Morning ${userName}!`);
+} else if (time.getHours() < 18) {
+  greeting = window.alert(`Good Afternoon ${userName}!`);
+} else {
+  greeting = window.alert(`Good Evening ${userName}!`);
+}
 
-document.writeln(
-  "Thank you for your order of " +
-    numOfItems +
-    " " +
-    item +
-    " " +
-    userName +
-    "!"
-);
+let item = window.prompt("Please enter which Item you want", "Apples");
+let quantity = window.prompt("Please enter the quantity you want", "5");
+
+let currentDate = new Date();
+currentDate.setDate(currentDate.getDate());
+
+let arrivalDate = new Date();
+arrivalDate.setDate(arrivalDate.getDate() + 7);
+
+document.getElementById(
+  "message"
+).innerText = `${userName}, thank you for your order of ${quantity} ${item} on ${currentDate}.`;
+
+document.getElementById("orderDetails").innerHTML = `
+    <strong>Order Details:</strong><br>
+    Item Requested: ${item}<br>
+    Number of Items: ${quantity}<br>
+    Expected Arrival Date: ${arrivalDate.toDateString()}`;
