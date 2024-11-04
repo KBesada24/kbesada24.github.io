@@ -1,23 +1,32 @@
-const fetchButton = document.getElementById("fetchButton");
-const factsTable = document.querySelector("#factsTable tbody");
+const url = "https://brianobruno.github.io/cats.json";
+const options = {
+  method: "GET",
+};
+
 const catImage = document.getElementById("catImage");
+const fetchButton = document.getElementById("fetchButton");
+const factsTable = document.getElementById("factsTable");
 
-fetchButton.addEventListener("click", () => {
-  fetch("https://brianobruno.github.io/cats.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const sortedFacts = data.facts.sort((a, b) => a.factId - b.factId);
+async function fetchCatFacts() {
+  try {
+    const response = await fetch(url, options);
+    const result = await response.text();
+    myObj = JSON.parse(result);
 
-      factsTable.innerHTML = ""; // Clear existing table data
+    const sortedFacts = myObj.facts.sort((a, b) => a.factId - b.factId);
 
-      sortedFacts.forEach((fact) => {
-        const row = factsTable.insertRow();
-        const idCell = row.insertCell();
-        const factCell = row.insertCell();
-        idCell.textContent = fact.factId;
-        factCell.textContent = fact.text;
-      });
+    factsTable.innerHTML = "";
 
-      catImage.src = data.catPhoto; // Update the image source
+    sortedFacts.forEach((fact) => {
+      const row = factsTable.insertRow();
+      const idCell = row.insertCell();
+      const factCell = row.insertCell();
+      idCell.textContent = fact.factId;
+      factCell.textContent = fact.text;
     });
-});
+
+    catImage.src = myObj.catPhoto;
+  } catch (error) {
+    console.log("error", error);
+  }
+}
