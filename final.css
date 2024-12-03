@@ -1,0 +1,58 @@
+body {
+  background-color: #222;
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  color: #ffc107;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.jumbotron {
+  background-color: #333;
+}
+
+.card {
+  background-color: #444;
+  border: none;
+}
+
+.card-title {
+  color: #ffc107;
+}
+
+.card-text {
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Chuck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="final2.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="#">Accessible Pages</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="final.html">Return to Main Page</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="text-center" style="margin: 0 auto">Search for a Joke!</h1>
+      <p class="text-center">See all Chuck Norris Jokes for that Category!</p>
+      <img
+        src="https://media.gettyimages.com/id/525603356/photo/chuck-norris-poses-with-two-uzis-his-sleeveless-denim-shirt-unbuttoned-to-his-waist-publicity.jpg?s=612x612&w=gi&k=20&c=zfyN3hKB9g0iH0s9_G38vcYYKFaNJh4eekwRSOu0VyE="
+        alt="Chuck Norris image"
+        id="firstImage"
+      />
+      <br />
+      <div id="page2Container" class="p-3 mb-3 bg-white rounded shadow-sm">
+        <img id="secondImage" src="" />
+      </div>
+      <input
+        type="text"
+        id="searchQuery"
+        class="form-control"
+        placeholder="Search for Jokes"
+        required
+      />
+      <button id="searchJoke" class="btn btn-success" onclick="searchQuery()">
+        Get the Jokes
+      </button>
+    </div>
+    <script src="final.js"></script>
+  </body>
+</html>
